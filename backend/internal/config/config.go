@@ -8,20 +8,20 @@ import (
 )
 
 type Config struct {
-	Port         string
-	DatabaseURL  string
-	RedisAddr    string
-	RedisPass    string
-	QdrantHost   string
-	QdrantPort   string
-	GeminiKey    string
-	OpenAIKey    string
+	Port               string
+	DatabaseURL        string
+	RedisAddr          string
+	RedisPass          string
+	QdrantHost         string
+	QdrantPort         string
+	GeminiKey          string
+	OpenAIKey          string
 	GoogleClientID     string
 	GoogleClientSecret string
 	GoogleRedirectURL  string
-	JWTSecret    string
-	DevMode      bool
-	GitHubToken  string
+	JWTSecret          string
+	DevMode            bool
+	GitHubToken        string
 }
 
 func LoadConfig() *Config {

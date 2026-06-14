@@ -55,7 +55,7 @@ func (q *QdrantClient) InitCollection(collectionName string, vectorSize int) err
 	resp, err := q.client.Do(req)
 	if err == nil && resp.StatusCode == http.StatusOK {
 		defer resp.Body.Close()
-		
+
 		// Parse collection details to verify dimension matches
 		var colInfo struct {
 			Result struct {
@@ -68,16 +68,16 @@ func (q *QdrantClient) InitCollection(collectionName string, vectorSize int) err
 				} `json:"config"`
 			} `json:"result"`
 		}
-		
+
 		if err := json.NewDecoder(resp.Body).Decode(&colInfo); err == nil {
 			existingSize := colInfo.Result.Config.Params.Vectors.Size
 			if existingSize == vectorSize {
 				slog.Info("Qdrant collection already exists with correct dimensions", "collection", collectionName, "size", vectorSize)
 				return nil
 			}
-			
+
 			slog.Warn("Qdrant collection dimension mismatch. Recreating collection.", "collection", collectionName, "existing", existingSize, "new", vectorSize)
-			
+
 			// Delete existing collection
 			delURL := fmt.Sprintf("%s/collections/%s", q.baseURL, collectionName)
 			delReq, err := http.NewRequest("DELETE", delURL, nil)

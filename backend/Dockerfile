@@ -22,6 +22,7 @@ WORKDIR /app
 # Copy binary from builder
 COPY --from=builder /app/server .
 COPY --from=builder /app/.env.example .env.example
+COPY go.mod go.sum* ./
 
 EXPOSE 8080
 

@@ -19,11 +19,14 @@ import (
 	"github-assistant/backend/internal/redis"
 	"github-assistant/backend/internal/vector"
 	"github-assistant/backend/internal/worker"
+
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	// 1. Initialize structured logging
+	// 1. logging
+	godotenv.Load()
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelInfo}))
 	slog.SetDefault(logger)
 
@@ -164,9 +167,7 @@ func main() {
 	slog.Info("Server exited.")
 }
 
-// -----------------------------------------------------------------------------
 // Mock AI Service Implementation for Local Test
-// -----------------------------------------------------------------------------
 
 type mockAIService struct{}
 

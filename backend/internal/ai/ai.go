@@ -55,7 +55,7 @@ func (g *GeminiService) GetModelName() string {
 }
 
 func (g *GeminiService) GetVectorDimension() int {
-	return 768 // text-embedding-004 dimension
+	return 3072 // gemini-embedding-2 dimension
 }
 
 func (g *GeminiService) GetEmbedding(ctx context.Context, text string) ([]float32, error) {
