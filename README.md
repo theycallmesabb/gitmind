@@ -61,3 +61,9 @@ REDIS_URL=redis:6379
 GEMINI_API_KEY=your_google_gemini_api_key
 OPENAI_API_KEY=your_openai_api_key
 GITHUB_TOKEN=your_github_personal_access_token
+
+2. Run with Docker
+docker-compose up --build
+🌐 Access Points
+Frontend Dashboard: http://localhost:3000
+Backend API: http://localhost:8082
