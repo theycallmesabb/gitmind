@@ -1,10 +1,3 @@
-# Ignore noise, but keep TS still counted
 frontend/node_modules/* linguist-vendored
 frontend/.next/* linguist-vendored
 frontend/dist/* linguist-vendored
-
-# Keep actual TS source counted
-frontend/src/* linguist-detectable=true
-
-# Ensure Go is fully counted
-*.go linguist-detectable=true
