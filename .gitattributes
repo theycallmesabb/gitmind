@@ -1,0 +1,4 @@
+frontend/* linguist-vendored
+frontend/**/* linguist-vendored
+
+*.go linguist-detectable=true
