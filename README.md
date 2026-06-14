@@ -70,3 +70,20 @@ docker-compose up --build
 Frontend Dashboard: http://localhost:3000
 Backend API: http://localhost:8082
 ```
+
+---
+
+## 💡 Why This Project Matters
+
+Modern software systems are becoming increasingly large and complex, making it difficult for developers to quickly understand unfamiliar codebases. GitMind solves this problem by turning any GitHub repository into an interactive, conversational knowledge system.
+
+Instead of manually searching through thousands of lines of code, developers can simply ask questions in natural language and get precise, context-aware answers grounded in the actual source code.
+
+This project demonstrates how Retrieval-Augmented Generation (RAG), vector databases, and modern distributed systems can be combined to create practical developer tools that significantly improve productivity, onboarding speed, and code comprehension.
+
+GitMind is not just a chatbot — it is a step toward AI-native software engineering workflows where understanding code becomes instant and interactive.
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
